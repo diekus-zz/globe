@@ -54,12 +54,16 @@ var createCursor = function(){
 }
 
 var addLaserControls = function(){
-  var t_touchCtrls_L = document.createElement('a-entity');
-  t_touchCtrls_L.setAttribute('laser-controls', 'hand:left');
-  document.querySelector('a-scene').appendChild(t_touchCtrls_L);
-  var t_touchCtrls_R = document.createElement('a-entity');
-  t_touchCtrls_R.setAttribute('laser-controls', 'hand:right');
-  document.querySelector('a-scene').appendChild(t_touchCtrls_R);
+  var t_laserCtrls_L = document.createElement('a-entity');
+  t_laserCtrls_L.setAttribute('laser-controls', 'hand:left');
+  t_laserCtrls_L.setAttribute('raycaster', 'objects:.telesphere');
+  t_laserCtrls_L.setAttribute('collider-check', '');
+  document.querySelector('a-scene').appendChild(t_laserCtrls_L);
+  var t_laserCtrls_R = document.createElement('a-entity');
+  t_laserCtrls_R.setAttribute('laser-controls', 'hand:right');
+  t_laserCtrls_R.setAttribute('raycaster', 'objects:.telesphere');
+  t_laserCtrls_R.setAttribute('collider-check', '');
+  document.querySelector('a-scene').appendChild(t_laserCtrls_R);
 }
 
 var addOculusTouch = function(){

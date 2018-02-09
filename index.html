@@ -8,6 +8,7 @@
     <script src="js/e/aframe.js"></script>
     <script src="js/devDet.js"></script>
     <script src="js/vr0.js"></script>
+    <script src="js/collider-check.js"></script>
     
 </head>
 <body>
@@ -37,15 +38,17 @@
         <a-image src="#logo-globe" position="0 3.5 -5" scale="2.3 1 1"></a-image>
 
 
-        <a-sphere src="i/360o/staines.jpg" radius=".6" position="-15.4 11.2 0.4" scale="-1 1 1"></a-sphere>
-        <a-sphere src="i/360o/helsinki.jpg" position="-12.172 13.196 -5.856" scale="-1 1 1" radius=".6"></a-sphere>
-        <a-sphere src="i/360o/seoul.jpg" position="10 7.6 -13.2" scale="-1 1 1" radius=".6"></a-sphere>
-        <a-sphere src="i/360o/sevilla.jpg" position="-17.4 7.8 1.8" scale="-1 1 1" radius=".6"></a-sphere>
-        <a-sphere src="i/360o/singapore.jpg" position="4.6 -0.3 -18.76" scale="-1 1 1" radius=".6"></a-sphere>
-        <a-sphere src="i/360o/losangeles.jpg" radius=".6" position="8.3 7 15.7" scale="-1 1 1"></a-sphere>
-        <a-sphere src="i/360o/paris.jpg" radius=".6" position="-16.216 10.207 -1.101" scale="-1 1 1"></a-sphere>
-        <a-sphere src="i/360o/sanjose.jpg" radius=".6" position="-1.9 1.4 18.7" scale="-1 1 1"></a-sphere>
-        <a-sphere src="i/360o/jerusalem.jpg" position="-15 6 -10.2" scale="-1 1 1" radius=".6"></a-sphere>
+        <a-sphere src="i/360o/staines.jpg" class="telesphere" radius=".6" position="-15.4 11.2 0.4" scale="-1 1 1"></a-sphere>
+        <a-sphere src="i/360o/helsinki.jpg" class="telesphere" position="-12.172 13.196 -5.856" scale="-1 1 1" radius=".6"></a-sphere>
+        <a-sphere src="i/360o/seoul.jpg" class="telesphere" position="10 7.6 -13.2" scale="-1 1 1" radius=".6"></a-sphere>
+        <a-sphere src="i/360o/sevilla.jpg" class="telesphere" position="-17.4 7.8 1.8" scale="-1 1 1" radius=".6"></a-sphere>
+        <a-sphere src="i/360o/singapore.jpg" class="telesphere" position="4.6 -0.3 -18.76" scale="-1 1 1" radius=".6"></a-sphere>
+        <a-sphere src="i/360o/losangeles.jpg" class="telesphere" radius=".6" position="8.3 7 15.7" scale="-1 1 1"></a-sphere>
+        <a-sphere src="i/360o/paris.jpg" class="telesphere" radius=".6" position="-16.216 10.207 -1.101" scale="-1 1 1"></a-sphere>
+        <a-sphere src="i/360o/sanjose.jpg" class="telesphere" radius=".6" position="-1.9 1.4 18.7" scale="-1 1 1"></a-sphere>
+        <a-sphere src="i/360o/jerusalem.jpg" class="telesphere" position="-15 6 -10.2" scale="-1 1 1" radius=".6"></a-sphere>
+
+        <a-sphere src="i/360o/jerusalem.jpg" class="telesphere" position="0 0 -5" scale="1 1 1" radius="1"></a-sphere>
 
 
     </a-scene>

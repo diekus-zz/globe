@@ -1,40 +1,40 @@
-var devDet_scene = null;
+let devDet_scene = null;
 
-var deviceDetection = function(){
+let deviceDetection = function(){
 
   devDet_scene = document.querySelector('a-scene');
-    if(navigator.getVRDisplays) { // is webvr supported?
-        console.log('WebXR supported');
-        // Then get the displays attached to the computer
-        navigator.getVRDisplays().then(function(displays) {
-          if(displays.length > 0) { //if there are VR devices attached to the machine
-            console.log(displays[0].displayName + " attached");
+  if(navigator.getVRDisplays) { // is webvr supported?
+      console.log('WebXR supported');
+      // Then get the displays attached to the computer
+      navigator.getVRDisplays().then(function(displays) {
+        if(displays.length > 0) { //if there are VR devices attached to the machine
+          console.log(displays[0].displayName + " attached");
 
-            if(AFRAME.utils.device.isGearVR()){
-              //addGearVRControl();
-              addLaserControls();
-            }
-            else if(displays[0].displayName.indexOf('Windows Mixed Reality') != -1){ 
-              //addWindowsMixedRealityControllers();
-              addLaserControls();
-            }
-            else if(displays[0].displayName.indexOf('Oculus') != -1)
-            {
-              //addOculusTouch();
-              addLaserControls();
-            }
-            console.log('added tracked controls');
+          if(AFRAME.utils.device.isGearVR()){
+            //addGearVRControl();
+            addLaserControls();
           }
-          else{ // no headset connected
-            console.log('no headset available');
-            createCursor();
+          else if(displays[0].displayName.indexOf('Windows Mixed Reality') != -1){ 
+            //addWindowsMixedRealityControllers();
+            addLaserControls();
           }
-        });
-      }
-      else{ // spec not implemented
-        createCursor();
-        
-      }
+          else if(displays[0].displayName.indexOf('Oculus') != -1)
+          {
+            //addOculusTouch();
+            addLaserControls();
+          }
+          console.log('added tracked controls');
+        }
+        else{ // no headset connected
+          console.log('no headset available');
+          createCursor();
+        }
+      });
+    }
+    else{ // spec not implemented
+      createCursor();
+      
+    }
 }
 
 //Creates the cursor. Overrides the default camera.
